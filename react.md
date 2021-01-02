@@ -1,5 +1,6 @@
-# ArquitecturaSofware2020
+#Tutorial React.js
 
-###### El encabezado más pequeño
+##¿Que es React?
 
-**este texto esta en negrita**
+React es una libreria que nos permite a nosotros crear aplicaciones
+Alser una libreria, se puede poner el el html de tu pagina e inmediatamente  empezar a trabajar.
