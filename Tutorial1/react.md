@@ -22,4 +22,4 @@ Son pequeñas piezas de codigo encapsuladas que pueden tener estados o no y de e
 
 ### ¿Como luce un codigo de React?
 
-![alt text](https://raw.githubusercontent.com/fernando479/ArquitecturaSofware/main/Tutorial1/image.png)
+!(https://raw.githubusercontent.com/fernando479/ArquitecturaSofware2020/master/Tutorial1/image.png)
