@@ -28,4 +28,5 @@ Son pequeñas piezas de codigo encapsuladas que pueden tener estados o no y de e
 Esta es la aplicacion mas sencilla que podemos hacer, notemos que la primera linea que tenemos ahí es javaScript puro, que es una constante que mantiene una referencia mediante el querySelector a un elemento del html que tiene el id 'root'
 
 Luego se tiene un objeto llamado ReactDom que tiene un metodo que se llama render. A ese render le estamos mandando  algo que parece html, que es una etiqueta h1 que es un Hola mundo y luego como segundo argumento, se manda el divRoot, es decir, la referencia al elemento donde queremos renderizar o mostrar en pantalla ese contenido de h1, al ejecutar esto tenemos literalmente el resultado que estabamos pensando, un Hola mundo en nuestro navegador web
+
 ![](https://raw.githubusercontent.com/fernando479/ArquitecturaSofware2020/main/Tutorial1/Selection_001.png)
