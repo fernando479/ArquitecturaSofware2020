@@ -30,3 +30,17 @@ Esta es la aplicacion mas sencilla que podemos hacer, notemos que la primera lin
 Luego se tiene un objeto llamado ReactDom que tiene un metodo que se llama render. A ese render le estamos mandando  algo que parece html, que es una etiqueta h1 que es un Hola mundo y luego como segundo argumento, se manda el divRoot, es decir, la referencia al elemento donde queremos renderizar o mostrar en pantalla ese contenido de h1, al ejecutar esto tenemos literalmente el resultado que estabamos pensando, un Hola mundo en nuestro navegador web
 
 ![](https://raw.githubusercontent.com/fernando479/ArquitecturaSofware2020/main/Tutorial1/Selection_001.png)
+
+
+Para comprender mejor,  el codigo que tenemos acá, lo vamos a separar  en una variable  para que lo miremos mejor y lo analicemos
+
+![](https://raw.githubusercontent.com/fernando479/ArquitecturaSofware2020/main/Tutorial1/Selection_002.png)
+
+![](https://raw.githubusercontent.com/fernando479/ArquitecturaSofware2020/main/Tutorial1/Selection_003.png)
+
+Ese h1Tag se lo estamos mandando al metodo render de ReactDom, el cual lo crea en el HTML, lo demas sigue siendo lo mismo, la referencia al html y el metodo que vamos a llamar para renderizar algo, ese "algo" sera un *componente*
+Lo interesante aqui es que estamos asignando a nuestra constante el valor de una etiqueta html
+
+![](https://raw.githubusercontent.com/fernando479/ArquitecturaSofware2020/main/Tutorial1/Selection_004.png)
+
+Al ejecutar esto se tiene el mismo resultado anterior
