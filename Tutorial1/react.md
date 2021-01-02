@@ -21,3 +21,5 @@ Son pequeñas piezas de codigo encapsuladas que pueden tener estados o no y de e
 
 
 ### ¿Como luce un codigo de React?
+
+![alt text](https://raw.githubusercontent.com/fernando479/ArquitecturaSofware/main/Tutorial1/img.png)
