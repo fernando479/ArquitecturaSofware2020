@@ -43,4 +43,10 @@ Lo interesante aqui es que estamos asignando a nuestra constante el valor de una
 
 ![](https://raw.githubusercontent.com/fernando479/ArquitecturaSofware2020/main/Tutorial1/Selection_004.png)
 
+Esta mezcla que tenemos en pantalla es conocida como JSX que no es más que javaScript más XML, perfectamente nosotros podriamos escribir todo el codigo sin usar esa etiqueta usando codigo en javaScript, como lo muestra la siguiete imagen
+
+![](https://raw.githubusercontent.com/fernando479/ArquitecturaSofware2020/main/Tutorial1/Selection_005.png)
+
+Pero toda esa linea de codigo es el equivalente a esa creacion de la etiqueta directamente explicita en JSX, haciendo uso de JSX simplifica el codigo de una manera eficiente al usar simple etiquetas en el lado de JS.
+  
 Al ejecutar esto se tiene el mismo resultado anterior
