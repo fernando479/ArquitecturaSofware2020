@@ -23,3 +23,8 @@ Son pequeñas piezas de codigo encapsuladas que pueden tener estados o no y de e
 ### ¿Como luce un codigo de React?
 
 ![](https://raw.githubusercontent.com/fernando479/ArquitecturaSofware2020/main/Tutorial1/image.png)
+
+
+Esta es la aplicacion mas sencilla que podemos hacer, notemos que la primera linea que tenemos ahí es javaScript puro, que es una constante que mantiene una referencia mediante el querySelector a un elemento del html que tiene el id 'root'
+
+Luego se tiene un objeto llamado ReactDom que tiene un metodo que se llama render
