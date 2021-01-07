@@ -21,13 +21,13 @@ Todos los datos de Redis residen en la memoria principal del servidor, a diferen
   
 A diferencia de los almacenes de datos de clave valor simplistas que ofrecen estructuras de datos limitadas, Redis cuenta con una amplia variedad de estructuras de datos para satisfacer los requisitos de sus aplicaciones. Los tipos de datos de Redis incluyen:
 
-  Cadenas: datos de texto o binarios de hasta 512 MB de tamaño
-  Listas: una colección de cadenas en el orden en que se agregaron
-  Conjuntos: una colección desordenada de cadenas con la capacidad para intercalarse, unirse y diferenciarse de otros tipos de conjuntos
+  - Cadenas: datos de texto o binarios de hasta 512 MB de tamaño
+  - Listas: una colección de cadenas en el orden en que se agregaron
+  - Conjuntos: una colección desordenada de cadenas con la capacidad para intercalarse, unirse y diferenciarse de otros tipos de conjuntos
   Conjuntos ordenados: conjuntos ordenados por un valor
-  Hashes: una estructura de datos para almacenar una lista de campos y valores
-  Mapas de bits: un tipo de datos que ofrece operaciones a nivel de bits
-  HyperLogLogs: una estructura de datos probabilísticos para estimar los elementos únicos en un conjunto de datos
+  - Hashes: una estructura de datos para almacenar una lista de campos y valores
+  - Mapas de bits: un tipo de datos que ofrece operaciones a nivel de bits
+  - HyperLogLogs: una estructura de datos probabilísticos para estimar los elementos únicos en un conjunto de datos
  
  **Simplicidad y facilidad de uso**
   
