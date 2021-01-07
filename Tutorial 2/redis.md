@@ -55,4 +55,11 @@ El primer paso consiste en descargar Redis. Para ello, usamos el gestor de paque
 
 ```sudo apt-get install redis-server```
 
+Para comprobar si Redis funciona correctamente, iniciamos la interfaz de comunicación con la base de datos:
 
+```redis-cli```
+
+La interfaz debería mostrar entonces ladirección IP y el puerto a través del cual se ejecuta Redis, a los que se puede enviar un ping de comprobación.
+
+```127.0.0.1:6379> ping```
+`PING`
