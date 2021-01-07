@@ -1,16 +1,16 @@
-##Redis
+## Redis
 
-###¿Que es Redis?
+### ¿Que es Redis?
 
 
 Redis(Remote Dictionary Serve) es un rapido alamacen de dato clave-valor en memoria de código abierto que se puede utilizar como base de datos, caché, agente de mensajes y cola. Redis ofrece tiempos de respuesta inferiores al milisegundo, lo que permite que se realicen millones de solicitudes por segundo para aplicaciones en tiempo real de videojuegos, tecnología publicitaria, servicios financieros, sanidad e IoT. Redis es una opción muy habitual en aplicaciones de almacenamiento en caché, administración de sesiones, videojuegos, tablas de clasificación, análisis en tiempo real, datos geoespaciales, servicios de vehículos compartidos, chat/mensajería, streaming de contenido multimedia y publicación/suscripción.
 
 
-###¿como funciona Redis? 
+### ¿como funciona Redis? 
 
 Todos los datos de Redis residen en la memoria, a diferencia de las bases de datos que almacenan datos en discos o SSD. Como no hay ninguna necesidad de obtener acceso al disco, los almacenes de datos en memoria, como Redis, evitan los retrasos y pueden obtener acceso a los datos en cuestión de milisegundos. Redis incluye estructuras de datos versátiles, alta disponibilidad, datos geoespaciales, scripts Lua, transacciones, persistencia en disco y soporte de clúster, lo que simplifica la creación de aplicaciones a escala de Internet en tiempo real.
 
-###beneficios de redis
+### beneficios de redis
 
 **Almacén de datos en memoria**
 
