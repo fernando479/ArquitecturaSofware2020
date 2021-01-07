@@ -65,3 +65,139 @@ La interfaz debería mostrar entonces ladirección IP y el puerto a través del 
 127.0.0.1:6379> ping
 PONG
 ```
+
+Si Redis responde, queda demostrado que el sistema de bases de datos se ha instalado correctamente. Ahora también se puede comprobar si se puede escribir texto.
+
+```
+127.0.0.1:6379> set test "OK!"
+127.0.0.1:6379> get test
+"OK!"
+```
+
+### crear entradas
+
+Una vez hayas configurado Redis, ya puedes trabajar con la base de datos. Dispones para ello de varios tipos distintos de datos y de comandos.
+
+**Strings**
+
+Lo más fácil es crear una string, es decir, una cadena o secuencia de elementos. Para ello, utiliza el comando **set**.
+
+```
+127.0.0.1:6379> set foo "bar"
+127.0.0.1:6379> set value 1
+```
+
+Si se solicitan ahora las entradas foo y value mediante el comando get, se mostrarán los valores correspondientes.
+
+```
+127.0.0.1:6379> get foo
+"bar"
+127.0.0.1:6379> get value
+"1"
+```
+
+El comando para borrar una entrada es **del**.
+
+```
+127.0.0.1:6379> del foo
+(integer) 1
+127.0.0.1:6379> get foo
+(nil)
+```
+
+Si no queremos crear muchas entradas usando una fila nueva cada vez, puedes usar la función avanzada mset. Para solicitar los valores de varios campos a la vez, también existe el comando mget.
+
+```
+127.0.0.1:6379> mset foo1 "bar1" foo2 "bar2" foo3 "bar3"
+OK
+127.0.0.1:6379> mget foo1 foo2 foo3
+1) "bar1"
+2) "bar2"
+3) "bar3"
+```
+
+**Listas**
+
+Con Redis se pueden usar, además, otros tipos de datos. Algunos de los más populares para trabajar con la base de datos son, por ejemplo, las listas y los sets. Ambos son conjuntos de valores, pero, mientras que los sets no tienen un orden concreto, los valores de las listas están numerados. En una lista se pueden añadir, solicitar o borrar entradas.
+
+```
+127.0.0.1:6379> lpush mylist foo
+(integer) 1
+127.0.0.1:6379> lpush mylist bar
+(integer) 2
+127.0.0.1:6379> lrange mylist 0 10
+1) "foo"
+2) "bar"
+127.0.0.1:6379> linsert mylist before "bar" "test"
+(integer) 3
+127.0.0.1:6379> lrange mylist 0 10
+1) "foo"
+2) "test"
+3) "bar"
+127.0.0.1:6379> lrem mylist 0 foo
+(integer) 1
+127.0.0.1:6379> lrange mylist 0 10
+1) "test"
+2) "bar"
+```
+
+En este ejemplo hemos añadido en primer lugar dos elementos a una lista (lpush) y luego hemos solicitado que se muestren. Con el comando lrange se indica qué segmento debe mostrarse (aquí del 0 al 10, pero pueden usarse también números negativos). A continuación, mediante el comando linsert hemos añadido un valor nuevo delante de uno que ya existía (también podría usarse after), con lo cual hemos cambiado la numeración. El comando lrem permite borrar de la lista entradas con un valor específico.
+
+**Sets**
+
+Para los sets, Redis utiliza otros comandos, pero con resultados muy similares:
+
+```
+127.0.0.1:6379> sadd myset "foo"
+(integer) 1
+127.0.0.1:6379> sadd myset "bar"
+(integer) 1
+127.0.0.1:6379> smembers myset
+1) "bar"
+2) "foo"
+127.0.0.1:6379> sismember myset "bar"
+(integer) 1
+127.0.0.1:6379> srem myset "bar"
+(integer) 1
+127.0.0.1:6379> smembers myset
+1) "foo"
+```
+
+Con el comando sadd también se pueden integrar varios elementos en el set si se introducen en el comando uno detrás de otro. Para visualizar el set, basta con usar el comando smembers y el nombre del set en cuestión. El comando sismember permite, además, buscar una entrada concreta. De manera análoga a la lista, con srem se pueden borrar entradas sueltas.
+
+Sin embargo, Redis también ofrece a los usuarios la posibilidad de utilizar sets en un formato ordenado.
+
+```
+127.0.0.1:6379> zadd mysortedset 1 "foo"
+(integer) 1
+127.0.0.1:6379> zadd mysortedset 2 "bar"
+(integer) 1
+127.0.0.1:6379> zadd mysortedset 2 "foobar"
+(integer) 1
+127.0.0.1:6379> zrange mysortedset 0 10
+1) "foo"
+2) "bar"
+3) "foobar"
+
+```
+
+Para añadir elementos se utiliza, en este caso, el comando zadd y un score o puntaje. Mientras que los valores propiamente dichos no pueden aparecer más de una vez, con un score se puede indicar un mismo valor varias veces. El score no es, por lo tanto, una numeración directa dentro del set, sino una ponderación, de manera que todas las entradas con el puntaje o score2 aparecerán tras los que tengan el score1. Con el comando zrange se pueden visualizar todos los elementos o los que se seleccionen.
+
+**Hashes**
+
+Un tipo especial de datos son los hashes: entradas individuales compuestas de varios valores, de manera similar a los sets y las listas, pero en los que cada valor va acompañado de una clave, formando así los llamados pares clave-valor o key-value.
+
+```
+127.0.0.1:6379> zadd mysortedset 1 "foo"
+(integer) 1
+127.0.0.1:6379> zadd mysortedset 2 "bar"
+(integer) 1
+127.0.0.1:6379> zadd mysortedset 2 "foobar"
+(integer) 1
+127.0.0.1:6379> zrange mysortedset 0 10
+1) "foo"
+2) "bar"
+3) "foobar"
+```
+
+En este ejemplo, hemos usado hset para crear un hash con el nombre user1 y tres campos. Mediante el comando hget podemos solicitar el valor de cada campo. Para que se muestren todos, se puede usar hgetall. Otras opciones para visualizar valores son hvals (muestra todos los valores guardados en el hash) y hkeys (muestra todas las claves guardadas en el hash). Con hdel se pueden borrar valores sueltos, mientras que con del, como ya hemos visto, se borra el hash entero.
