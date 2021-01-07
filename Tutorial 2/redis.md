@@ -61,6 +61,7 @@ Para comprobar si Redis funciona correctamente, iniciamos la interfaz de comunic
 
 La interfaz debería mostrar entonces ladirección IP y el puerto a través del cual se ejecuta Redis, a los que se puede enviar un ping de comprobación.
 
-```127.0.0.1:6379> ping
-
-PONG```
+```
+127.0.0.1:6379> ping
+PONG
+```
