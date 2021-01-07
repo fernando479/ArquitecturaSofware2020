@@ -51,5 +51,7 @@ Como Redis es open source, es decir, de código abierto, así que cualquiera pue
 
 El primer paso consiste en descargar Redis. Para ello, usamos el gestor de paquetes de Ubuntu, que tendremos que actualizar primero a la versión más reciente.
 
-`sudo apt-get update
- sudo apt-get install redis-server`
+```sudo apt-get update```
+```sudo apt-get install redis-server```
+
+
