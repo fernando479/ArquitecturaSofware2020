@@ -44,3 +44,12 @@ Redis ofrece una arquitectura con servidor principal y réplica en una topologí
 **Extensibilidad**
 
 Redis es un proyecto de código abierto que cuenta con el apoyo de una comunidad activa. No hay limitaciones de proveedores ni tecnología porque Redis está basado en estándares abiertos, admite formatos de datos abiertos y cuenta con una completa base de clientes.
+
+### instalar Redis
+
+Como Redis es open source, es decir, de código abierto, así que cualquiera puede descargar, usar y editar el sistema.
+
+El primer paso consiste en descargar Redis. Para ello, usamos el gestor de paquetes de Ubuntu, que tendremos que actualizar primero a la versión más reciente.
+
+`sudo apt-get update
+ sudo apt-get install redis-server`
