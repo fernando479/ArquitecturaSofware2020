@@ -22,30 +22,30 @@ Son pequeñas piezas de codigo encapsuladas que pueden tener estados o no y de e
 
 ### ¿Como luce un codigo de React?
 
-![](https://raw.githubusercontent.com/fernando479/ArquitecturaSofware2020/main/Tutorial1/image.png)
+![](https://raw.githubusercontent.com/fernando479/ArquitecturaSofware2020/main/Tutorial_6_react/image.png)
 
 
 Esta es la aplicacion mas sencilla que podemos hacer, notemos que la primera linea que tenemos ahí es javaScript puro, que es una constante que mantiene una referencia mediante el querySelector a un elemento del html que tiene el id 'root'
 
 Luego se tiene un objeto llamado ReactDom que tiene un metodo que se llama render. A ese render le estamos mandando  algo que parece html, que es una etiqueta h1 que es un Hola mundo y luego como segundo argumento, se manda el divRoot, es decir, la referencia al elemento donde queremos renderizar o mostrar en pantalla ese contenido de h1, al ejecutar esto tenemos literalmente el resultado que estabamos pensando, un Hola mundo en nuestro navegador web
 
-![](https://raw.githubusercontent.com/fernando479/ArquitecturaSofware2020/main/Tutorial1/Selection_001.png)
+![](https://raw.githubusercontent.com/fernando479/ArquitecturaSofware2020/main/Tutorial_6_react/Selection_001.png)
 
 
 Para comprender mejor,  el codigo que tenemos acá, lo vamos a separar  en una variable  para que lo miremos mejor y lo analicemos
 
-![](https://raw.githubusercontent.com/fernando479/ArquitecturaSofware2020/main/Tutorial1/Selection_002.png)
+![](https://raw.githubusercontent.com/fernando479/ArquitecturaSofware2020/main/Tutorial_6_react/Selection_002.png)
 
-![](https://raw.githubusercontent.com/fernando479/ArquitecturaSofware2020/main/Tutorial1/Selection_003.png)
+![](https://raw.githubusercontent.com/fernando479/ArquitecturaSofware2020/main/Tutorial_6_react/Selection_003.png)
 
 Ese h1Tag se lo estamos mandando al metodo render de ReactDom, el cual lo crea en el HTML, lo demas sigue siendo lo mismo, la referencia al html y el metodo que vamos a llamar para renderizar algo, ese "algo" sera un *componente*
 Lo interesante aqui es que estamos asignando a nuestra constante el valor de una etiqueta html
 
-![](https://raw.githubusercontent.com/fernando479/ArquitecturaSofware2020/main/Tutorial1/Selection_004.png)
+![](https://raw.githubusercontent.com/fernando479/ArquitecturaSofware2020/main/Tutorial_6_react/Selection_004.png)
 
 Esta mezcla que tenemos en pantalla es conocida como JSX que no es más que javaScript más XML, perfectamente nosotros podriamos escribir todo el codigo sin usar esa etiqueta usando codigo en javaScript, como lo muestra la siguiete imagen
 
-![](https://raw.githubusercontent.com/fernando479/ArquitecturaSofware2020/main/Tutorial1/Selection_005.png)
+![](https://raw.githubusercontent.com/fernando479/ArquitecturaSofware2020/main/Tutorial_6_react/Selection_005.png)
 
 Pero toda esa linea de codigo es el equivalente a esa creacion de la etiqueta directamente explicita en JSX, haciendo uso de JSX simplifica el codigo de una manera eficiente al usar simple etiquetas en el lado de JS.
   
