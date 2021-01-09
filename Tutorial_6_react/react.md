@@ -55,7 +55,7 @@ Al ejecutar esto se tiene el mismo resultado anterior
 
 Create React App es un ambiente cómodo para aprender React, y es la mejor manera de comenzar a construir una nueva aplicación de página única usando React
 
-Create React App configura nuestro ambiente de desarrollo de forma que se usar las últimas características de Javascript, brindando una buena experiencia de desarrollo, y optimizando tu aplicación para producción. Necesitaremos tener Node >= 8.10 y npm >= 5.6 instalados en la máquina. Para crear un proyecto ejecuta:
+Create React App configura nuestro ambiente de desarrollo de forma que se usar las últimas características de Javascript, brindando una buena experiencia de desarrollo, y optimizando tu aplicación para producción. Necesitaremos tener Node >= 8.10 y npm >= 5.6 instalados en la máquina. Para crear un proyecto podemos ejecutar:
 
 ```
 npx create-react-app my-app
@@ -63,6 +63,6 @@ cd my-app
 npm start
 ```
 
-Podemos abrir en nuestro editor de codigo favorito la carpeta creada que contiene los archivos (de la imagen) para empezar a trabajar en React! 
+Podemos abrir en nuestro editor de codigo favorito la carpeta creada que contiene los archivos para empezar a trabajar en React! 
 
 ![](https://raw.githubusercontent.com/fernando479/ArquitecturaSofware2020/main/Tutorial_6_react/Selection_006.png)
